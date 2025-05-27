@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Form, Button } from "react-bootstrap";
 import "./Signup.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate ,Link} from "react-router-dom";
 
 const Signup = () => {
   const [signupDetails, setSignUpDetails] = useState({
@@ -24,7 +24,7 @@ const Signup = () => {
       return;
     } else {
       allUserData.push(signupDetails);
-      localStorage.setItem("FormData", JSON.stringify(allUserData));
+      localStorage.setItem("FormData", JSON.stringify(allUserData)); //used to update the users into an array
       alert("successfully signup");
       // localStorage.setItem("FormData",JSON.stringify(signUpDetails))
       
@@ -81,7 +81,7 @@ const Signup = () => {
         </Form.Select>
         <br />
         <p style={{ textAlign: "center" }}>
-          Already Registered? <a href="/login">Login</a>
+          Already Registered? <Link to='login'>Login</Link>
         </p>
         <Button variant="primary" type="submit">
           Sign Up
