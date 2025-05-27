@@ -81,7 +81,7 @@ const Signup = () => {
         </Form.Select>
         <br />
         <p style={{ textAlign: "center" }}>
-          Already Registered? <Link to='login'>Login</Link>
+          Already Registered? <Link to='/login'>Login</Link>
         </p>
         <Button variant="primary" type="submit">
           Sign Up
